@@ -1,0 +1,18 @@
+
+public class CalculateArea {
+
+	public static void main(String[] args) {
+CalculateCircleArea(10);
+}
+public static double CalculateCircleArea(int radius)
+
+{
+	//This method calculates the area of a circle
+	//Input: integer radius value
+	//Output: double area
+	
+	double area = 3.14 * radius * radius;
+	return area;
+}
+
+}
