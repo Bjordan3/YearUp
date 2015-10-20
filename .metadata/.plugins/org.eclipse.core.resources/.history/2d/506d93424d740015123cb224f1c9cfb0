@@ -16,7 +16,7 @@ public class DayOfWeek {
 		{
 			if (!dayOfWeek.isEmpty())
 			{
-				if (dayOfWeek.equalsIgnoreCase("Monday")||
+				if (dayOfWeek.equals("Monday")||
 					dayOfWeek.equalsIgnoreCase("Tuesday")||
 					dayOfWeek.equalsIgnoreCase("Wednesday")||
 					dayOfWeek.equalsIgnoreCase("Thursday")||

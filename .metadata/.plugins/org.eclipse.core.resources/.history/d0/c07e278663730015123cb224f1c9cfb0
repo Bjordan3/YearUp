@@ -22,7 +22,7 @@ public class DayOfWeek {
 					dayOfWeek.equalsIgnoreCase("Thursday")||
 					dayOfWeek.equalsIgnoreCase("Friday"))
 				{
-					System.out.println(dayOfWeek + " is a weekday!");
+					System.out.println(dayOfWeek + "is a weekday!");
 			}
 				else if (dayOfWeek.equalsIgnoreCase("Saturday")||
 						dayOfWeek.equalsIgnoreCase("Sunday"))
