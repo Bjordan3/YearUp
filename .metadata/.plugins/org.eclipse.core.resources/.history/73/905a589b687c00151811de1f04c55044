@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class ShoppingCart {
+
+	public static void main(String[] args) 
+	{
+
+	}
+	
+	public static void Intro()
+	{
+		System.out.println("Welcome to the Shopping Cart");
+	}
+}

@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class ShoppingCart {
+
+	public static void main(String[] args) 
+	{
+		System.out.println("Welcome to the Shopping Cart!");
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Would you like to input item/s - y/n?");
+		String answer = sc.nextLine();
+		Answer(answer);
+		sc.close();
+		double[] itemPrice = new double[99];
+		Scanner sc1 = new Scanner(System.in);
+		for (double i=0; i != -1; i++)
+		{
+			itemPrice[i] = sc1.nextDouble();
+		}
+	}
+	
+	public static void Answer(String answer)
+	{
+		if (answer != null)
+		{
+			if (!answer.isEmpty())
+			{
+				if (answer.equalsIgnoreCase("y"))
+				{
+					System.out.println("Please enter an item price, or -1 to exit: ");
+				}
+				else
+				{
+					if (answer.equalsIgnoreCase("n"))
+					{
+						System.out.println("Then why are you here?");
+					}
+					else
+					{
+						System.out.println("Invalid entry");
+					}
+				}
+			}
+		}
+	}
+	
+	}
