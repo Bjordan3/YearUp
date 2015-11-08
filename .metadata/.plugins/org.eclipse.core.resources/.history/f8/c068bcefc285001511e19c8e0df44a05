@@ -1,0 +1,154 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ShoppingCart 
+{
+	static ArrayList<Product> Item = new ArrayList<Product>();
+	static Scanner itemSc = new Scanner(System.in);
+	static boolean quit = false;
+	
+	public static void main(String[] args)
+	{
+		// this method prints an introduction message
+		printIntroduction();
+		
+		//this method does all the work associated with the shopping cart
+		shoppingCartWork();
+	}
+	
+	public static void printIntroduction()
+	{
+		System.out.println("*************************************");
+		System.out.println();
+		System.out.println("*          Shopping Cart            *");
+		System.out.println();
+		System.out.println("*************************************");
+	}
+	
+	public static void shoppingCartWork()
+	{
+		System.out.println("Do you want to input items? Type y/n");
+		String reply = itemSc.nextLine();
+
+		if (reply.equalsIgnoreCase("y"))
+		{
+			quit = false;
+			readItems();
+			cleanUpCart();
+			double totalWithTax = calculateTotalWithTax();
+			printItemsAndTotal(totalWithTax);
+			printCashOrCreditMessage(totalWithTax);
+			
+		}
+		else
+		{
+			System.out.println("GoodBye!");
+		}
+	}
+
+	private static void printItemsAndTotal(double totalWithTax) 
+	{
+		for(int i = 0; i < Item.size(); i++)
+		{
+			Product current = Item.get(i);
+			System.out.println("Item number: " + (i+1) + " Item name: " + current.getName()
+			+ " Item price: " + current.getPrice());
+		}
+	}
+
+	private static void printCashOrCreditMessage(double totalWithTax) 
+	{
+	while (totalWithTax > 100)
+		{
+			System.out.println("Your total is over $100. Would you like to pay credit or cash?");
+			String reply1 = itemSc.nextLine();
+			if (reply1.equalsIgnoreCase("credit"))
+			{
+				System.out.println("Credit line opened!");
+			}
+			else
+			{
+				System.out.println("You will be paying with cash");
+		}
+		}
+		
+	}
+
+	private static void readItems() 
+	{
+		
+		do
+		{
+		System.out.println("Enter item name or 'quit' to stop.");
+		String name = itemSc.next();
+		if(name.equalsIgnoreCase("quit"))
+		{
+			quit = true;
+			break;
+		}
+		System.out.println("Enter item price.");
+		double price = itemSc.nextDouble();
+		Product.add(new Product(name, price));
+		}
+		while(!quit);
+		
+	}
+	
+	private static void listItems() 
+	{	
+		for(int i = 0; i < Item.size(); i++)
+		{
+			Product Product = Item.get(i);
+			System.out.println("Item number: " + (i+1) + " Item name: " + Product.getName() + " Item price: " + Product.getPrice());
+		//WRITE CODE:  neatly format the list of items and print them
+		//you should have it in this format:  
+		//0: Name : Toothpaste Price: 4.56 Quantity: 3
+	}
+	}
+	
+	private static void cleanUpCart()
+	{
+		listItems();
+	
+		System.out.println("Do you wish to remove items, enter y or n: ");
+		String item = itemSc.nextLine();
+		
+		if (item.equalsIgnoreCase("y"))
+		{
+			System.out.println("Enter item number to remove, -1 to quit");
+			
+			int indexRead = itemSc.nextInt();
+			
+			int indexOfItem = indexRead -1;
+			while (indexRead != -1)
+			{
+				Product Remove = Item.get(indexOfItem);
+				
+				if (Remove != null)
+				{
+					Item.remove(indexOfItem);
+					indexOfItem = indexRead -1;
+					System.out.println("You have removed " + indexOfItem);
+					listItems();
+				}
+						}
+			//WRITE CODE:  if the item exists, remove it from the shopping cart					
+			//WRITE CODE: re-list items (item indexes may have changed)
+			
+					System.out.println("Enter item number to remove from cart or -1 to stop:");
+					indexRead = itemSc.nextInt();
+					indexOfItem = indexRead -1;
+				}
+			}
+		
+
+
+	private static double calculateTotalWithTax() 
+	{
+		double z = 0;
+		return z;
+		
+		//WRITE CODE:  Total up items as price * quantity for each item.  Add tax to the total for all items in cart and return total + tax.
+	}
+
+}

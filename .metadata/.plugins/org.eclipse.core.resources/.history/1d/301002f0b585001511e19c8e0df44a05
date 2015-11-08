@@ -1,0 +1,64 @@
+
+public class Product {
+public String Name = null;
+public double Price;
+public double WithTax;
+public int Quantity;
+
+public Product(String name, double price, double withTax)
+{
+	String Name = name;
+	double Price = price;
+	double tax = .075;
+	withTax = price + tax;
+}
+public Product(String name)
+{
+	Name = name;
+}
+
+public static void add(String name)
+{
+	
+}
+
+public Product(double price)
+{
+	Price = price;
+}
+
+public static void add(double price)
+{
+	
+}
+
+public String getName()
+{
+	return Name;
+}
+
+public void setName(String name)
+{
+	Name = name;
+}
+
+public double getPrice()
+{
+	return Price;
+}
+
+public void setPrice(double price) 
+{
+	Price = price;
+}
+
+public double getWithTax() 
+{
+	return WithTax;
+}
+
+public void setWithTax(double withTax) 
+{
+	WithTax = withTax;
+}
+}
