@@ -35,7 +35,7 @@ public class Scientist implements ITaxPayer
 	{
 		if (m_donePayingTaxes) 
 		{
-			System.out.println("Scientist is filing hix tax return");
+			System.out.println("Scientist is filling hix tax return");
 		}
 	}
 
