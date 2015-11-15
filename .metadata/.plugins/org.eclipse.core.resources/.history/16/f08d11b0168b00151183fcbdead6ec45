@@ -1,0 +1,11 @@
+package java.lang.java.io.InputStreamReader
+java.io.FileReader;
+
+public class FileReader extends InputStreamReader {
+
+	public FileReader(File file) {
+		super(file);
+		// TODO Auto-generated constructor stub
+	}
+
+}
