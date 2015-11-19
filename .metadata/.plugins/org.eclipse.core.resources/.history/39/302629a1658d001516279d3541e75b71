@@ -1,0 +1,40 @@
+import java.awt.Container;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import java.awt.Panel;
+
+import javax.swing.*;
+
+public class GUI extends JFrame 
+{
+
+	public static void main(String[] args) 
+	{
+		new GUI();
+	}
+	
+	public GUI()
+	{		
+		super("Hello");
+		
+		JFrame frame = new JFrame();
+		
+		setSize(250, 250); 
+		
+		JPanel panel = new JPanel();
+		setLayout(new FlowLayout());
+		
+				JLabel jlbGUI = new JLabel("My name is: ");
+				panel.add(jlbGUI);
+
+				JTextField jtfGUI = new JTextField(10);
+				jtfGUI.getText();
+				panel.add(jtfGUI);
+				jtfGUI.setEditable(true);
+				
+				JLabel jlbGUI1 = new JLabel("I am: ");
+				panel.add(jlbGUI1);
+				
+				setVisible(true);
+	}
+}
