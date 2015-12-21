@@ -1,4 +1,3 @@
-
 public class Song 
 {
 	private String m_songName = "";
@@ -14,16 +13,16 @@ public class Song
 	
 	public void setSongName(String songName)
 	{
-		songName = m_songName;
+		m_songName = songName;
 	}
 	public void setRanking(int ranking)
 	{
-		ranking = m_ranking;
+		m_ranking = ranking;
 	}
 	
 	public void setArtist(String artist)
 	{
-		artist = m_artist;
+		m_artist = artist;
 	}
 	
 	public String getSongName()

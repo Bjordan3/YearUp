@@ -26,7 +26,6 @@ public class Playlist {
 					Songs.add(newSong);
 					System.out.println("Enter song name or Q to quit");
 					songName = sc.nextLine();
-					sc.nextLine();
 				}
 	}
 	public static void DisplayPlaylist()
